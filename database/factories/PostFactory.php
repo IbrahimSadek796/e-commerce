@@ -18,6 +18,14 @@ class PostFactory extends Factory
     {
         return [
             //
+            'title' => fake()->word(),
+            'description' => fake()->text(),
+            'price' => fake()->numberBetween(100 , 5000),
+            'number_of_product' => fake() -> numberBetween(1 , 9),
+            'taxs' => fake() -> numberBetween(5 , 25),
+            'image' => fake()->imageurl(),
+            'quality' => fake() -> numberBetween(1 , 5),
+            'kind' => $this->faker->randomElement(['men','women','kids']),
         ];
     }
 }
