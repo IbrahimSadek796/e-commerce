@@ -16,6 +16,7 @@
 
 
     <!-- Favicons -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{url('/css/all.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{url('css/elegant-icons.css')}}" type="text/css">

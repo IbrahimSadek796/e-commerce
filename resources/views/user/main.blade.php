@@ -6,7 +6,7 @@ Home Page
 
 @Section('RegLog')
 <li class="d-inline nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
 <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Profile</a></li>
     <li><a class="dropdown-item" href="#">Wishlist</a></li>
@@ -14,7 +14,7 @@ Home Page
   </ul>
 </li>
 
-<li class="d-inline nav-item me-2"><a href="{{route('user.shopping.cart')}}" class="text-danger"><i class="fas fa-cart-shopping"></i> My Cart</a></li>
+{{-- <li class="d-inline nav-item me-2"><a href="{{route('user.shopping.cart')}}" class="text-danger"><i class="fas fa-cart-shopping"></i> My Cart</a></li> --}}
 
 <li class="d-inline nav-item"><a href="{{ route('logout') }}"
 onclick="event.preventDefault();

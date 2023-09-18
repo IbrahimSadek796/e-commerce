@@ -3,26 +3,24 @@
 @section('title','Women-Page')
 
 @Section('RegLog')
-{{-- <a href="#">{{ Auth::user()->name }}</a> --}}
+<li class="d-inline nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
+<ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Profile</a></li>
+    <li><a class="dropdown-item" href="#">Wishlist</a></li>
+    <li><a class="dropdown-item" href="#">My Order</a></li>
+  </ul>
+</li>
 
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        {{ Auth::user()->name }}
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><a class="dropdown-item" href="#">Wishlist</a></li>
-      <li><a class="dropdown-item" href="#">My Order</a></li>
-    </ul>
-  </div>
+{{-- <li class="d-inline nav-item me-2"><a href="{{route('user.shopping.cart')}}" class="text-danger"><i class="fas fa-cart-shopping"></i> My Cart</a></li> --}}
 
-<a href="{{ route('logout') }}"
+<li class="d-inline nav-item"><a href="{{ route('logout') }}"
 onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
  {{ __('Logout') }}</a>
  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
     @csrf
-</form>
+</form></li>
 @endsection
 
 @Section('links')

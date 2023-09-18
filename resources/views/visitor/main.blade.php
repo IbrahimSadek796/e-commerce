@@ -5,8 +5,8 @@ Home Page
 @endsection
 
 @Section('RegLog')
-    <a href="{{url('/login')}}">Login</a>
-    <a href="{{url('/register')}}">Register</a>
+    <a href="{{route('login')}}">Login</a>
+    <a href="{{route('register')}}">Register</a>
 @endsection
 
 @Section('links')
